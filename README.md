@@ -10,61 +10,35 @@
          animal_listview.xml
 
         ```xml
-        <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--定义一个listview-->
         <ListView
             android:id="@+id/mylist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:listSelector="#a61c1c"
             >
-            </ListView>
-        </LinearLayout>
+        </ListView>
         ```
         animal.xml
         ```xml
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
-            <!-- LinnerLayout定义的2个控件，将成为ListView控件的模板 -->
-            <TextView
-                android:id="@+id/header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"/>
             <ImageView
-                android:id="@+id/images"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginVertical="10dp"
-                android:maxHeight="5dp"
-                android:maxWidth="5dp"/>
-        </LinearLayout>
+            android:id="@+id/images"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginVertical="10dp"
+            android:maxHeight="5dp"
+            android:maxWidth="5dp"/>
         ```
         animal.java
         ```java
-        import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.view.View;
-        import android.view.Window;
-        import android.widget.AdapterView;
-        import android.widget.ListView;
-        import android.widget.SimpleAdapter;
-        import android.widget.Toast;
-        import java.util.ArrayList;
-        import java.util.HashMap;
-        import java.util.List;
-        import java.util.Map;
-
         public class animal extends AppCompatActivity {
             //存放动物名称和照片
             private String[] names = new String[]{"Lion","Tiger","Monkey","Dog","Cat","Elephant"};
@@ -106,46 +80,32 @@
 
         alertdialog.xml
         ```xml
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <ImageView
+            android:src="@drawable/tu"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <ImageView
-                android:src="@drawable/tu"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:scaleType="center"
-                android:background="#FFFFBB33"
-                android:contentDescription="@string/app_name" />
-            <EditText
-                android:id="@+id/editText2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Username"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editText4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword" />
-        </LinearLayout>
+            android:layout_height="64dp"
+            android:scaleType="center"
+            android:background="#FFFFBB33"
+            android:contentDescription="@string/app_name" />
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
         ```
         alertdialog.java
         ```java
-        import android.content.DialogInterface;
-        import android.graphics.Color;
-        import android.os.Bundle;
-        import android.support.v7.app.AlertDialog;
-        import android.support.v7.app.AppCompatActivity;
-        import android.view.View;
-        import android.widget.Toast;
-
         public class alertdialog extends AppCompatActivity {
             @Override
             protected void onCreate(Bundle savedInstanceState) {
@@ -190,16 +150,12 @@
    
         xml_show.xml
         ```xml
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <TextView
             android:id="@+id/textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
-        </LinearLayout>
         ```
         xml_menu.xml
         ```xml
@@ -245,15 +201,6 @@
         ```
         xml.menu.java
         ```java
-        import android.graphics.Color;
-        import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.view.Menu;
-        import android.view.MenuInflater;
-        import android.view.MenuItem;
-        import android.widget.TextView;
-        import android.widget.Toast;
-
         public class xml_menu extends AppCompatActivity {
             @Override
             protected void onCreate(Bundle savedInstanceState) {
@@ -313,41 +260,29 @@
 
         actionmode_list.xml
         ```xml
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher_round" />
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:textStyle="bold" />
-        </LinearLayout>
+         <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher_round" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold" />
         ```
         actionmode_main.xml
         ```xml
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <ListView
+            android:id="@android:id/list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <!--定义一个listview-->
-            <ListView
-                android:id="@android:id/list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:choiceMode="multipleChoice">
-            </ListView>
-        </LinearLayout>
+            android:layout_centerVertical="true"
+            android:choiceMode="multipleChoice">
+        </ListView>
         ```
         actionmode.xml
         ```xml
@@ -365,20 +300,6 @@
         ```
         actionMode.java
         ```java
-        import android.app.ListActivity;
-        import android.content.Context;
-        import android.os.Bundle;
-        import android.view.ActionMode;
-        import android.view.Menu;
-        import android.view.MenuInflater;
-        import android.view.MenuItem;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.AbsListView;
-        import android.widget.ArrayAdapter;
-        import android.widget.ListView;
-        import java.util.HashMap;
-
         public class actionMode extends ListActivity {
             private String[] Datas = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine","Ten"};
             private SelectionAdapter sAdapter;
@@ -399,9 +320,6 @@
                     @Override       //响应删除
                     public void onDestroyActionMode(ActionMode mode) {
                         sAdapter.clearSelection();
-        /*               TextView txta;
-                        txta = (TextView)findViewById(R.id.textView1);
-                        txta.setText(""); */
                     }
                     @Override        // 加载xml中的上下文菜单。实现右侧的MenuItem配置
                     public boolean onCreateActionMode(ActionMode mode, Menu menu) {
@@ -479,57 +397,8 @@
     ![main](https://img-blog.csdnimg.cn/20190323105004451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQ3OTEzNA==,size_16,color_FFFFFF,t_70)
 
     1. 关键代码
-
-        activity_main.xml
-        ```xml
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="148dp"
-                android:layout_height="75dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="SimpleAdapter实现动物界面" />
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="150dp"
-                android:layout_height="72dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="AlertDialog自定义对话框" />
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="154dp"
-                android:layout_height="69dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="XML定义菜单 " />
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="154dp"
-                android:layout_height="69dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="ActionMode的上下文菜单" />
-        </LinearLayout>
-        ```
         MainActivity.java
         ```java
-        import android.app.Activity;
-        import android.os.Bundle;
-        import android.widget.Button;
-        import android.view.View;
-        import android.content.Intent;
-
         public class MainActivity extends Activity {
             private Button button1,button2,button3,button4;
             @Override
